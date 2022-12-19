@@ -13,7 +13,7 @@ public class Ending : MonoBehaviour
        if (collidedWith.tag == "player")
         {
            gameObject.SetActive(false);
-           //WinText.gameObject.SetActive(true);
+           WinText.gameObject.SetActive(true);
         }
     }
 
