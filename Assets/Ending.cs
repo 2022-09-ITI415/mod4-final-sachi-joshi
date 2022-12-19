@@ -9,11 +9,13 @@ public class Ending : MonoBehaviour
     
     void OnCollsionEnter (Collision coll) 
     {
+    
+        Debug.Log("HaveCollidedWithSomething" + coll.gameObject.name);
         GameObject collidedWith = coll.gameObject;
-       if (collidedWith.tag == "player")
+       if (collidedWith.tag == "Player")
         {
-           gameObject.SetActive(false);
-           WinText.gameObject.SetActive(true);
+           winText.gameObject.SetActive(true);
+           //WinText.gameObject.SetActive(true);
         }
     }
 
@@ -26,5 +28,13 @@ public class Ending : MonoBehaviour
 
            // SetCountText();
         }
+        Debug.Log("HaveCollidedWithSomething" + other.gameObject.name);
+        GameObject collidedWith = other.gameObject;
+       if (collidedWith.tag == "Player")
+        {
+           winText.gameObject.SetActive(true);
+           //WinText.gameObject.SetActive(true);
+        }
     }
 }
+    
